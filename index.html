@@ -36,8 +36,17 @@ L.tileLayer('map/valena/{z}/{x}/{y}.png', {
 var marker = L.marker([0, 0]).addTo(map);
 marker.bindPopup('<b>Our Heros!</b>');
 
-var markerarrive = L.marker([-16, -154]).addTo(map);
-markerarrive.bindPopup('<b>The Starting City</b>');
+var marker_arrive = L.marker([-16, -154])
+        marker_arrive.bindPopup('<img src="Incoming_area.jpg" width="300" height="200"><br><h1 style="color:red;font-size:20px;">Your Starting Area</h1><p>You have begun here, searching this mysterious lands. Continue your adventure traveller, prove your worth.<p>');
+
+
+
+
+
+
+
+
+//set max bounds shiz
 
 map.setMaxBounds(new L.LatLngBounds(
 	map.unproject(mapSW, map.getMaxZoom()),
