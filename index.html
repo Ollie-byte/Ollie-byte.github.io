@@ -27,14 +27,11 @@ L.tileLayer('map/valena/{z}/{x}/{y}.png', {
 	}).addTo(map);
 
 //Markers and popups
-var marker = L.marker([0, 0], {
-	draggable:true,
-}).addTo(map);
+var marker = L.marker([0, 0]).addTo(map);
 marker.bindPopup('<b>Our Heros!</b>');
 
-map.on('click', function(ev) {
-    alert(ev.latlng); // ev is an event object (MouseEvent in this case)
-});
+var markera = L.marker([0, 0]).addTo(map);
+marker.bindPopup('<b>Our Heros!</b>');
 
 </script>
 
