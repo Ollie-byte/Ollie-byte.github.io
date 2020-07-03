@@ -18,8 +18,8 @@
 
 //variables
 
-var mapSW = [0, 4096],
-	mapNE = [4096, 0];
+var mapSW = [0, 7680],
+	mapNE = [7680, 0];
 
 
 var map = L.map('map').setView([0, 0], 3);
@@ -29,6 +29,7 @@ L.tileLayer('map/valena/{z}/{x}/{y}.png', {
 	maxZoom: 4, 
 	continuousWorld: false, 
 	noWrap: true,
+	crs: L.CRS.Simple,
 	}).addTo(map);
 
 //Markers and popups
