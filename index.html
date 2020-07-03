@@ -16,6 +16,11 @@
 
 <script type="text/javascript">
 
+//variables
+
+var mapSW = ,
+	mapNE = ;
+
 
 var map = L.map('map').setView([0, 0], 3);
 
@@ -32,6 +37,17 @@ marker.bindPopup('<b>Our Heros!</b>');
 
 var markera = L.marker([-16, -154]).addTo(map);
 marker.bindPopup('<b>Our Heros!</b>');
+
+map.setMaxBounds(new L.LatlingBounds(
+
+
+	));
+
+//clicker telling thingie
+
+map.on('click', function(ev) {
+    alert(ev.latlng); // ev is an event object (MouseEvent in this case)
+});
 
 </script>
 
