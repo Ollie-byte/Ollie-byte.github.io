@@ -18,8 +18,8 @@
 
 //variables
 
-var mapSW = ,
-	mapNE = ;
+var mapSW = [0, 4096],
+	mapNE = [4096, 0];
 
 
 var map = L.map('map').setView([0, 0], 3);
@@ -39,9 +39,10 @@ var markera = L.marker([-16, -154]).addTo(map);
 marker.bindPopup('<b>Our Heros!</b>');
 
 map.setMaxBounds(new L.LatlingBounds(
-
-
+	map.unproject(mapSW, map.getMaxZoom()),
+	map.unproject(mapNE, map.getMaxZoom())
 	));
+
 
 //clicker telling thingie
 
